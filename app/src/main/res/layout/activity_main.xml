@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.scorekeeper.MainActivity">
+
+    <!-- ImageView for background image of curling game -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/curling2" />
+
+    <!-- TEXT:  Curling Fever - Catch It! -->
+    <TextView
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingBottom="4dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:text="Curling Fever - Catch It!"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- LinearLayout with horizontal orientation to hold scoreboard -->
+    <LinearLayout
+        android:id="@+id/score_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- TEXT:  Team names -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  Team A -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Team A"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Filler -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:padding="4dp"
+                android:text="Score"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  Team B -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Team B"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 1 Point -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  1 Point -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 2 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  2 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="2"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 3 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  3 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="3"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 4 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  4 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="4"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 5 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  5 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="5"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 6 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  6 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="6"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 7 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  7 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="7"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 8 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  8 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="8"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 9 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  9 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="9"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 10 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  10 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="10"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 11 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  11 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="11"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 12 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  12 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="12"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 13 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  13 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="13"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 14 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  14 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="14"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 15 Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_a_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- TEXT:  15 Points -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="15"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/score_team_b_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D50000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <!-- Relative Layout to hold Linear Layouts for scoring buttons -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score_board">
+
+        <!-- LinearLayout for Current End -->
+        <LinearLayout
+            android:id="@+id/current_end_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- TEXT:  Current End -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="Current End"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <!-- TextView to display currentEnd variable -->
+            <TextView
+                android:id="@+id/current_end_display_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center_horizontal"
+                android:text="1"
+                android:textColor="#000000"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@+id/current_end_layout"
+            android:background="@android:color/darker_gray" />
+
+        <!-- LinearLayout for Points In End -->
+        <LinearLayout
+            android:id="@+id/points_in_end_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/current_end_layout"
+            android:orientation="vertical">
+
+            <!-- TEXT:  Points in End -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="Points in End"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <!-- LinearLayout for decrement/increment buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <!-- BUTTON:  Decrement -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="64dp"
+                    android:layout_margin="4dp"
+                    android:onClick="decrement"
+                    android:text="-"
+                    android:textColor="#000000" />
+
+                <!-- TextView to display pointsInEnd variable -->
+                <TextView
+                    android:id="@+id/points_in_end_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <!-- BUTTON:  Increment -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="64dp"
+                    android:layout_margin="4dp"
+                    android:onClick="increment"
+                    android:text="+"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Divding line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@+id/points_in_end_layout"
+            android:background="@android:color/darker_gray" />
+
+        <!-- LinearLayout for Winner of End -->
+        <LinearLayout
+            android:id="@+id/select_winner_of_end_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/points_in_end_layout"
+            android:orientation="vertical">
+
+            <!-- TEXT:  Winner of End -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/white"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:text="Winner of End"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <!-- LinearLayout for TeamA/TeamB select buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <!-- BUTTON:  Select Team A -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="64dp"
+                    android:layout_margin="4dp"
+                    android:onClick="teamAWinsEnd"
+                    android:text="A"
+                    android:textColor="#000000" />
+
+                <!-- BUTTON:  Select Team B -->
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="64dp"
+                    android:layout_margin="4dp"
+                    android:onClick="teamBWinsEnd"
+                    android:text="B"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@+id/select_winner_of_end_layout"
+            android:background="@android:color/darker_gray" />
+
+        <!-- LinearLayout for Blank Ends -->
+        <LinearLayout
+            android:id="@+id/blank_end_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/select_winner_of_end_layout"
+            android:orientation="vertical">
+
+
+            <!-- LinearLayout with horizontal orientation to hold Blank Ends text and button -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- TEXT:  Blank Ends -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+
+                    android:layout_marginTop="2dp"
+                    android:background="@android:color/white"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="Blank Ends"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <!-- BUTTON:  Blank End - 0 points -->
+                <Button
+                    android:layout_width="72dp"
+                    android:layout_height="52dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:onClick="blankEnd"
+                    android:text="0 Pts." />
+
+            </LinearLayout>
+
+            <!-- TextView to display blank ends -->
+            <TextView
+                android:id="@+id/blank_ends_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:text="---"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!-- Dividing line -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@+id/blank_end_layout"
+            android:background="@android:color/darker_gray" />
+
+        <!-- LinearLayout for Reset button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/blank_end_layout"
+            android:orientation="vertical">
+
+            <!-- BUTTON:   Extra End scores -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:onClick="addExtraEnd"
+                android:text="Extra End"
+                android:textAllCaps="false" />
+
+            <!-- BUTTON:   Resset scores -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:onClick="resetScoreBoard"
+                android:text="Reset"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
